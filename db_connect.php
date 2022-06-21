@@ -1,6 +1,6 @@
 <?php
 
-    $server = 'www.000webhost.com';
+    $server = '104.19.184.120';
     $username = 'id19145827_root';
     $password = 'I-h77^>EZ#epiM-{';
 
