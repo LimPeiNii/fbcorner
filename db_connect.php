@@ -1,6 +1,6 @@
 <?php
 
-    $server = '104.19.184.120';
+    $server = '104.19.185.120';
     $username = 'id19145827_root';
     $password = 'I-h77^>EZ#epiM-{';
 
