@@ -1,10 +1,10 @@
 <?php
 
-    $server = '104.19.185.120';
-    $username = 'id19145827_root';
-    $password = 'I-h77^>EZ#epiM-{';
+    $server = 'localhost';
+    $username = 'root';
+    $password = '';
 
-    $db = 'id19145827_fbcorner';
+    $db = 'fbcorner';
 
     // Create connection
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
