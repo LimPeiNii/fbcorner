@@ -1,0 +1,78 @@
+// global classes
+
+a, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+input, textarea{
+    border: 0.1px solid black !important;
+}
+
+textarea{
+    border-radius: 0.25rem;
+    resize: none;
+}
+
+button{
+    border: 0px;
+    background-color: transparent;
+}
+
+button:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input:checked[type=checkbox], input:checked[type=radio]{
+    background-color: black !important;
+}
+
+input[type=number], select{
+    border: 1px solid black !important; 
+}
+
+input:disabled{
+    border: 1px solid #ddd !important;
+    color: grey;  
+}
+
+select:disabled{
+    opacity: 0.5;
+    border: 0px !important;
+    background-color: #cbced1e8 !important;
+}
+
+select:not(select[multiple]) option{
+    background-color: black;
+    color: white;
+}
+
+h1, h2, h3, h4{
+    cursor: default;
+}
+
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+    background: #aaa;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #3289c8;
+}
+/* scrollbar */

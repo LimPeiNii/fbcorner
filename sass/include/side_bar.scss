@@ -1,0 +1,262 @@
+html{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+}
+
+.side-bar-body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 0;
+    width: 100%;
+    min-height: calc(100vh - 76px);
+    display: flex;
+}
+
+.side-bar-body .side-bar{
+    width: 80px;
+    background: $color-4;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    flex-shrink: 0;
+}
+
+.side-bar-body .side-bar.active{
+    width: 240px;
+}
+
+@media (max-width: 482px) {  
+    .side-bar-body .side-bar{
+        pointer-events: none;
+        opacity: 0;
+        width: 0 !important;
+    }
+
+    .side-bar-body .side-bar ~ .content{
+        margin-left: unset !important;
+        padding-left: 1.5rem !important;
+        pointer-events: auto;
+        opacity: 1;
+        display: block !important;
+    }
+
+    .side-bar-body .side-bar ~ .content.active{
+        pointer-events: none;
+        opacity: 0;
+        display: none !important;
+    }
+
+    .side-bar-body .side-bar.active{
+        width: 100% !important;
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    .side-bar-body .side-bar.active .dropdown-container.active{
+        width: 100% !important;
+    }
+}
+
+.side-bar .profile-content{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px 6px;
+    height: 110px;
+    white-space: nowrap;
+    pointer-events: none;
+    display: none;
+}
+
+.side-bar.active .profile-content{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.profile{
+    display: flex;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.profile img{
+    width: 50px;
+    margin-left: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.profile div{
+    padding-left: 10px;
+}
+
+.search{
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+    padding: 6px 14px;
+}
+
+.search input{
+    height: 50px;
+    width: 100%;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.search .search-btn{
+    position: relative;
+    top: -38px;
+    left: 18px;
+    font-size: 18px;
+}
+
+.side-bar ul{
+    padding-left: 0;
+}
+
+.side-bar ul li{
+    height: 50px;
+    width: 80px;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    transition: all 0.4s ease;
+    align-items: center;
+    white-space: nowrap;
+    line-height: 50px;
+}
+
+.side-bar ul li a,
+.dropdown-btn{
+    padding-left: 30px;
+    width: 100%;
+    display: block;
+}
+
+.dropdown-container li{
+    width: 100% !important;
+}
+
+.side-bar.active ul li{
+    width: 100%;
+}
+
+.side-bar ul li:hover{
+    background:rgba(219, 179, 255, 0.659);
+}
+
+.side-bar ul li i{
+    min-width: 30px;
+    border-radius: 12px;
+}
+
+.side-bar ul li .tool-tip{
+    position: absolute;
+    left: 85px;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background: black;
+    color: white;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+    z-index: 1;
+}
+
+.side-bar.active ul li .tool-tip{
+    display: none;
+}
+
+.side-bar ul li:hover .tool-tip{
+    transition: all 0.5s ease;
+    top: 50%;
+    opacity: 1;
+}
+
+.side-bar.active .nav-element-name{
+    pointer-events: none;
+    display: inline;
+}
+
+.side-bar .nav-element-name{
+    pointer-events: auto;
+    display: none;
+}
+
+.content{
+    margin-left: -80px;
+    padding-left: calc(80px + 1.25rem) !important;
+    width: 100%;
+    min-height: 100%;
+}
+
+.content.active{
+    margin-left: -240px;
+    padding-left: calc(240px + 1.25rem) !important;
+}
+
+.side-bar.active .fa-caret-up {
+    float: right;
+    padding-right: 8px;
+    line-height: 50px;
+    display: block;
+}
+
+.side-bar .fa-caret-up{
+    display: none;
+}
+
+.side-bar.active .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+    line-height: 50px;
+    display: block;
+}
+
+.side-bar .fa-caret-down{
+    display: none;
+}
+
+.dropdown-container{
+    display: none;
+}
+
+.dropdown-container.active{
+    display: block;
+}
+
+.side-bar .dropdown-container.active{
+    position: absolute;
+    width:  240px;
+    left: 80px;
+    top: 0;
+    background-color: $color-2;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    clip-path: inset(-5px -5px -5px 0px);
+}
+
+.dropdown-parent-container{
+    position: relative;
+}
+
+.side-bar.active .dropdown-container.active{
+    position: static;
+    box-shadow: 0 0 0 0;
+}

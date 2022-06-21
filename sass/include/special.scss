@@ -1,0 +1,84 @@
+#top-rated,
+#on-promotion,
+#most-favoured,
+#new-restaurants{
+    .owl-carousel .item a img{
+        transition: transform .5s ease;
+    }
+    
+    .owl-carousel .item a img:hover{
+        transform: scale(1.1);
+    }
+
+    .owl-carousel .owl-nav button{
+        position: absolute;
+        top: 30%;
+        outline: none;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev{
+        left: 0;
+    }
+
+    .owl-carousel .owl-nav button.owl-next{
+        right: 0;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev span,
+    .owl-carousel .owl-nav button.owl-next span{
+        font-size: 35px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev span{
+        margin-left: -60px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next span{
+        margin-right: -60px;
+    }
+}
+
+.blur{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.unscroll {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.popout-animation{
+    animation: popout 1s ease;
+    -webkit-animation: popout 1s ease;
+}
+
+.popout-animation-reverse{
+    animation: popout-reverse 1s ease;
+    -webkit-animation: popout-reverse 1s ease;
+}
+
+@keyframes popout {
+    from{transform:scale(0)}
+    80%{transform:scale(1.2)}
+    to{transform:scale(1)}
+}
+
+@keyframes popout-reverse {
+    to{transform:scale(0)}
+    80%{transform:scale(1.2)}
+    from{transform:scale(1)}
+}
+
+@-webkit-keyframes popout {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.2)}
+    to{-webkit-transform:scale(1)}
+}
+
+@-webkit-keyframes popout-reverse {
+    to{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.2)}
+    from{-webkit-transform:scale(1)}
+}

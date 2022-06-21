@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#nav-bar-dropdown::after{
+    border: 0;
+}
+
+#nav-bar-dropdown-menu{
+    min-width: 320px;
+}
+
+#nav-bar-dropdown-menu p{
+    cursor: default;
+}
