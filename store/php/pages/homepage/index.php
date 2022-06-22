@@ -58,6 +58,10 @@
       #autocomplete-restaurant-list div.active, #autocomplete-food-list div.active {
         background-color: #e9e9e9;
       }
+
+      #top-rated .owl-item img, #on-promotion .owl-item img, #most-favoured .owl-item img, #new-restaurants .owl-item img{
+        height: 178.36px;
+      }
     </style>
 
 </head>
